@@ -88,7 +88,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         Nombre del sitio
                       </label>
                       <input
-                        className="mt-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm  rounded-md p-1 border border-gray-300"
+                        className="mt-2 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm  rounded-md p-1 border border-gray-300"
                         type={"text"}
                         {...register('title', {
                           required: 'Este campo es requerido',
@@ -96,7 +96,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         })}
                       />
                       <div>
-                        {errors.title && <span className="text-sm text-orange-500">{errors.title.message}</span>}
+                        {errors.title && <span className="text-sm text-red-500">{errors.title.message}</span>}
                       </div>
                     </div>
 
@@ -105,14 +105,14 @@ export const FormSite:FC<Props> = ({site}) => {
                         Dominio
                       </label>
                       <input
-                        className="mt-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md p-1 border border-gray-300"
+                        className="mt-2 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm rounded-md p-1 border border-gray-300"
                         {...register('domain', {
                           required: 'Este campo es requerido',
                           minLength: { value: 2, message: 'Mínimo 2 caracteres' }
                         })}
                       />
                       <div>
-                        {errors.domain && <span className="text-sm text-orange-500">{errors.domain.message}</span>}
+                        {errors.domain && <span className="text-sm text-red-500">{errors.domain.message}</span>}
                       </div>
                     </div>
 
@@ -123,7 +123,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         Categoría
                       </label>
                       <select
-                        className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm capitalize"
+                        className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm capitalize"
                         {...register('category', {
                           required: 'Este campo es requerido',
                         })}
@@ -136,7 +136,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         }
                       </select>
                       <div>
-                        {errors.category && <span className="text-sm text-orange-500">{errors.category.message}</span>}
+                        {errors.category && <span className="text-sm text-red-500">{errors.category.message}</span>}
                       </div>
                     </div>
 
@@ -145,7 +145,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         Sección
                       </label>
                       <select
-                        className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm capitalize"
+                        className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm capitalize"
                         {...register('section', {
                           required: 'Este campo es requerido',
                         })}
@@ -159,7 +159,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         }
                       </select>
                       <div>
-                        {errors.category && <span className="text-sm text-orange-500">{errors.category.message}</span>}
+                        {errors.category && <span className="text-sm text-red-500">{errors.category.message}</span>}
                       </div>
                     </div>
 
@@ -168,7 +168,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         Item
                       </label>
                       <select
-                        className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm capitalize"
+                        className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm capitalize"
                         {...register('item', {
                           required: 'Este campo es requerido',
                         })}
@@ -182,7 +182,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         }
                       </select>
                       <div>
-                        {errors.category && <span className="text-sm text-orange-500">{errors.category.message}</span>}
+                        {errors.category && <span className="text-sm text-red-500">{errors.category.message}</span>}
                       </div>
                     </div>
 
@@ -191,7 +191,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         Inventario
                       </label>
                       <input
-                        className="mt-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md p-1"
+                        className="mt-2 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md p-1"
                         type='number'
                         {...register('inStock', {
                           required: 'Este campo es requerido',
@@ -199,7 +199,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         })}
                       />
                       <div>
-                        {errors.inStock && <span className="text-sm text-orange-500">{errors.inStock.message}</span>}
+                        {errors.inStock && <span className="text-sm text-red-500">{errors.inStock.message}</span>}
                       </div>
                     </div>
                     <div className="col-span-6 sm:col-span-3">
@@ -207,7 +207,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         Precio
                       </label>
                       <input
-                        className="mt-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md p-1"
+                        className="mt-2 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md p-1"
                         type='number'
                         {...register('price', {
                           required: 'Este campo es requerido',
@@ -215,7 +215,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         })}
                       />
                       <div>
-                        {errors.price && <span className="text-sm text-orange-500">{errors.price.message}</span>}
+                        {errors.price && <span className="text-sm text-red-500">{errors.price.message}</span>}
                       </div>
                     </div>
                     <div className="col-span-6 sm:col-span-3">
@@ -224,7 +224,7 @@ export const FormSite:FC<Props> = ({site}) => {
                       </label>
                       <input
                         type='number'
-                        className="mt-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md p-1"
+                        className="mt-2 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md p-1"
                         value={0}
                         disabled
                       />
@@ -237,7 +237,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         Dirección:
                       </label>
                       <input
-                        className="mt-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm  rounded-md p-1 border border-gray-300"
+                        className="mt-2 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm  rounded-md p-1 border border-gray-300"
                         type={"text"}
                         {...register('address', {
                           required: 'Este campo es requerido',
@@ -245,7 +245,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         })}
                       />
                       <div>
-                        {errors.address && <span className="text-sm text-orange-500">{errors.address.message}</span>}
+                        {errors.address && <span className="text-sm text-red-500">{errors.address.message}</span>}
                       </div>
                     </div>
 
@@ -254,7 +254,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         teléfono:
                       </label>
                       <input
-                        className="mt-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md p-1 border border-gray-300"
+                        className="mt-2 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm rounded-md p-1 border border-gray-300"
                         type='number'
                         {...register('numberPhone', {
                           required: 'Este campo es requerido',
@@ -262,7 +262,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         })}
                       />
                       <div>
-                        {errors.numberPhone && <span className="text-sm text-orange-500">{errors.numberPhone.message}</span>}
+                        {errors.numberPhone && <span className="text-sm text-red-500">{errors.numberPhone.message}</span>}
                       </div>
                     </div>
                   </div>
@@ -289,7 +289,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         <div className="flex text-sm text-gray-600">
                           <label
                             htmlFor="file-upload"
-                            className="relative cursor-pointer bg-white rounded-md font-medium text-orange-500 hover:text-orange-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-orange-500"
+                            className="relative cursor-pointer bg-white rounded-md font-medium text-red-500 hover:text-red-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-red-500"
                           >
                             <span>Cargar un archivo</span>
                             <input id="file-upload" name="file-upload" accept="image/png, image/gif, image/jpeg, image/webp" type="file" className="sr-only" onChange={onFileSelected} />
@@ -325,7 +325,7 @@ export const FormSite:FC<Props> = ({site}) => {
                     <div className="mt-1">
                       <textarea
                         rows={6}
-                        className="shadow-sm focus:ring-orange-500 focus:border-orange-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md p-1"
+                        className="shadow-sm focus:ring-red-500 focus:border-red-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md p-1"
                         {...register('description', {
                           required: 'Este campo es requerido',
                           minLength: { value: 2, message: 'Mínimo 3 caracteres' }
@@ -333,7 +333,7 @@ export const FormSite:FC<Props> = ({site}) => {
                       />
                     </div>
                     <div>
-                      {errors.description && <span className="text-sm text-orange-500">{errors.description.message}</span>}
+                      {errors.description && <span className="text-sm text-red-500">{errors.description.message}</span>}
                     </div>
 
                   </div>
@@ -352,7 +352,7 @@ export const FormSite:FC<Props> = ({site}) => {
                                 <input
                                   type="checkbox"
                                   value={data}
-                                  className="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300"
+                                  className="focus:ring-red-500 h-4 w-4 text-red-500 border-gray-300"
                                   {...register('sizes', {
                                     required: {
                                       value: true,
@@ -369,7 +369,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         </div>
                       </fieldset>
                       <div>
-                        {errors.sizes?.length === 0 && <span className="text-sm text-orange-500">seleccione al menos una talla</span>}
+                        {errors.sizes?.length === 0 && <span className="text-sm text-red-500">seleccione al menos una talla</span>}
                       </div>
                     </div> */}
 
@@ -379,14 +379,14 @@ export const FormSite:FC<Props> = ({site}) => {
                       </label>
                       <input
                         defaultValue={'como se ve en la imagen'}
-                        className="mt-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md p-1"
+                        className="mt-2 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md p-1"
                         {...register('color', {
                           required: 'Este campo es requerido',
                           minLength: { value: 2, message: 'Mínimo 2 caracteres' }
                         })}
                       />
                       <div>
-                        {errors.color && <span className="text-sm text-orange-500">{errors.color.message}</span>}
+                        {errors.color && <span className="text-sm text-red-500">{errors.color.message}</span>}
                       </div>
                     </div> */}
                     </div>
@@ -396,7 +396,7 @@ export const FormSite:FC<Props> = ({site}) => {
                         Tags
                       </label>
                       <input
-                        className="mt-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md p-1"
+                        className="mt-2 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md p-1"
                         type={"text"}
                         value={newTagValue}
                         onChange={({ target }) => setNewTagValue(target.value)}
@@ -426,7 +426,7 @@ export const FormSite:FC<Props> = ({site}) => {
                     <div className="px-4 py-3 bg-white text-right sm:px-6">
                       <button
                         type="submit"
-                        className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                        className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
                       >
                         Actualizar Datos del Sitio
                       </button>

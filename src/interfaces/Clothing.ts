@@ -1,4 +1,4 @@
-export interface IHardware {
+export interface IClothing {
 	_id: string;
 	name: string;
 	brand: string;
@@ -11,9 +11,12 @@ export interface IHardware {
 	item: string;
 	price: number;
 	oldPrice: number;
-	color: string;
 	tags: string[];
 	client: string;
 	status: boolean;
 	site: string;
+
+	color: string;
+	sizes: string[];
+
 }

@@ -1,5 +1,5 @@
 import { NextPage, GetServerSideProps } from 'next';
-import { Category, IHardware, Section } from "../../../../../src/interfaces";
+import { Category, IClothing, Section } from "../../../../../src/interfaces";
 import { LayoutAdmin } from '../../../../../components/Layout';
 import { graphQLClientS } from '../../../../../src/graphQLClient';
 import { SBS } from '../../../../../src/gql/siteQuery';
@@ -29,7 +29,7 @@ const ProductPage: NextPage<Props> = ({ section, category }) => {
 							<div className="my-6 container px-2 mx-auto flex flex-row lg:flex-row items-center lg:items-center justify-between ">
 								<h4 className="text-2xl font-bold leading-tight text-gray-800">Items</h4>
 								<Link href={`/admin/sites/${router.query.category}/${router.query.section}/new`}>
-									<a className="transition duration-150 ease-in-out hover:bg-orange-500 focus:outline-none border bg-orange-600 rounded text-white px-8 py-2 text-sm">Nuevo Item</a>
+									<a className="transition duration-150 ease-in-out hover:bg-red-500 focus:outline-none border bg-red-600 rounded text-white px-8 py-2 text-sm">Nuevo Item</a>
 								</Link>
 							</div>
 							<TableItem items={section.items} category={category} section={section._id}/>

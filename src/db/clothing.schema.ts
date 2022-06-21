@@ -1,7 +1,7 @@
 import mongoose, { Schema, model, Model } from 'mongoose';
-import { IHardware } from '../interfaces';
+import { IClothing } from '../interfaces';
 
-const hardwareSchema = new Schema({
+const clothingSchema = new Schema({
   name: { type: String, default: ''},
   brand: { type: String, default: ''},
   image: [{ type: String}],
@@ -13,12 +13,14 @@ const hardwareSchema = new Schema({
   price: { type: Number, default: 0},
   oldPrice: { type: Number, default: 0},
   tags: [{ type: String}],
+  sizes: [{ type: String}],
+  color: { type: String, default: 0},
   site: { type: String, default: 0},
   slug: { type: String},
   status: { type: Boolean},
 })
 
-const Hardware:Model<IHardware> = mongoose.models.Hardware || model('Hardware',hardwareSchema);
+const Clothing:Model<IClothing> = mongoose.models.Clothing || model('Clothing',clothingSchema);
 
-export default Hardware;
+export default Clothing;
 

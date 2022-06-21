@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Category, Featured, IHardware, Item, Section } from "../../src/interfaces";
+import { Category, Featured, IClothing, Item, Section } from "../../src/interfaces";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faCircleMinus } from '@fortawesome/free-solid-svg-icons';
@@ -7,7 +7,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 
 interface Props {
-	products: IHardware[];
+	products: IClothing[];
 }
 interface LayoutSiteListAdmin {
 	data: Category[] | Section[] | Featured[] | Item[];
@@ -80,7 +80,7 @@ export const LayoutItemListAdmin: FC<Props> = ({ products }) => {
 	const router = useRouter()
 
 	const onDeleteData = async (id: string) => {
-		await axios.delete(`${process.env.APIP_URL}/api/hardware/${id}`)
+		await axios.delete(`${process.env.APIP_URL}/api/clothing/${id}`)
 		router.reload()
 	}
 	return (

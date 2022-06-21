@@ -1,5 +1,5 @@
 import { FC,  } from "react";
-import { IHardware } from "../../src/interfaces";
+import { IClothing } from "../../src/interfaces";
 import { SwiperDetail } from "./Swiper";
 
 function classNames(...classes: string[]) {
@@ -7,7 +7,7 @@ function classNames(...classes: string[]) {
 }
 
 interface Props {
-	product: IHardware;
+	product: IClothing;
 }
 
 export const ProductOverviews: FC<Props> = ({ product }) => {
@@ -34,7 +34,7 @@ export const ProductOverviews: FC<Props> = ({ product }) => {
 							<form className="mt-5">
 								<button
 									type="submit"
-									className="mt-4 w-full bg-orange-500 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400"
+									className="mt-4 w-full bg-red-500 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400"
 								>
 									Agregar al carrito
 								</button>

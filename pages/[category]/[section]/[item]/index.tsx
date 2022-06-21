@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import { Category, IHardware, ISeo, Item, Section } from "../../../../src/interfaces";
+import { Category, IClothing, ISeo, Item, Section } from "../../../../src/interfaces";
 import React, { FC, useContext } from "react";
 import { ITEM, PRODUCTS_BY_ITEM } from "../../../../src/gql/query";
 import { Layout } from "../../../../components/Layout";
@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import { UiContext } from "../../../../src/context";
 
 interface Props {
-  items: IHardware[]
+  items: IClothing[]
   seo: ISeo
 }
 
@@ -34,9 +34,9 @@ const ItemPage:FC<Props> = ({items, seo}) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
-  const { hardwareAll } = await graphQLClientP.request(ITEM , {site: `${process.env.API_SITE}`})
+  const { clothingAll } = await graphQLClientP.request(ITEM , {site: `${process.env.API_SITE}`})
   
-  const paths = hardwareAll.map((data:IHardware) => ({
+  const paths = clothingAll.map((data:IClothing) => ({
     params: data
   }))
   return {
@@ -63,11 +63,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	}
 
 
-  const { hardwareByCategoryAndSectionAndItem } = await graphQLClientP.request(PRODUCTS_BY_ITEM, {category: `${category}`, section: `${section}`, item: `${item}`, site: `${process.env.API_SITE}`})
-  // console.log(hardwareByCategoryAndSectionAndItem)
+  const { clothingByCategoryAndSectionAndItem } = await graphQLClientP.request(PRODUCTS_BY_ITEM, {category: `${category}`, section: `${section}`, item: `${item}`, site: `${process.env.API_SITE}`})
   return {
     props: {
-      items: hardwareByCategoryAndSectionAndItem,
+      items: clothingByCategoryAndSectionAndItem,
       seo: {
         category: {
           name: res.name,

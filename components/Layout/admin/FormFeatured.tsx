@@ -81,7 +81,7 @@ export const FormFeatured: FC<Props> = ({ featured, category}) => {
                         Nombre del Destacado
                       </label>
                       <input
-                        className="mt-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm  rounded-md p-1 border border-gray-300"
+                        className="mt-2 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm  rounded-md p-1 border border-gray-300"
                         type={"text"}
                         {...register('name', {
                           onChange: (e) => { },
@@ -91,7 +91,7 @@ export const FormFeatured: FC<Props> = ({ featured, category}) => {
                         })}
                       />
                       <div>
-                        {errors.name && <span className="text-sm text-orange-500">{errors.name.message}</span>}
+                        {errors.name && <span className="text-sm text-red-500">{errors.name.message}</span>}
                       </div>
                     </div>
 
@@ -100,11 +100,11 @@ export const FormFeatured: FC<Props> = ({ featured, category}) => {
                         url
                       </label>
                       <input
-                        className="mt-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm rounded-md p-1 border border-gray-300"
+                        className="mt-2 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm rounded-md p-1 border border-gray-300"
                         disabled
                       />
                       {/* <div>
-                        {errors.domain && <span className="text-sm text-orange-500">{errors.domain.message}</span>}
+                        {errors.domain && <span className="text-sm text-red-500">{errors.domain.message}</span>}
                       </div> */}
                     </div>
                   </div>
@@ -129,7 +129,7 @@ export const FormFeatured: FC<Props> = ({ featured, category}) => {
                         <div className="flex text-sm text-gray-600">
                           <label
                             htmlFor="file-upload"
-                            className="relative cursor-pointer bg-white rounded-md font-medium text-orange-500 hover:text-orange-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-orange-500"
+                            className="relative cursor-pointer bg-white rounded-md font-medium text-red-500 hover:text-red-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-red-500"
                           >
                             <span>Cargar un archivo</span>
                             <input id="file-upload" name="file-upload" accept="image/png, image/gif, image/jpeg, image/webp" type="file" className="sr-only" onChange={onFileSelected} />
@@ -162,7 +162,7 @@ export const FormFeatured: FC<Props> = ({ featured, category}) => {
                         Descripción de la Imagen
                       </label>
                       <input
-                        className="mt-2 focus:ring-orange-500 focus:border-orange-500 block w-full shadow-sm sm:text-sm  rounded-md p-1 border border-gray-300"
+                        className="mt-2 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm  rounded-md p-1 border border-gray-300"
                         type={"text"}
                         {...register('imageAlt', {
                           required: 'Este campo es requerido',
@@ -170,7 +170,7 @@ export const FormFeatured: FC<Props> = ({ featured, category}) => {
                         })}
                       />
                       <div>
-                        {errors.imageAlt && <span className="text-sm text-orange-500">{errors.imageAlt.message}</span>}
+                        {errors.imageAlt && <span className="text-sm text-red-500">{errors.imageAlt.message}</span>}
                       </div>
                     </div>
                     <div>
@@ -180,7 +180,7 @@ export const FormFeatured: FC<Props> = ({ featured, category}) => {
                       <div className="mt-1">
                         <textarea
                           rows={6}
-                          className="shadow-sm focus:ring-orange-500 focus:border-orange-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md p-1"
+                          className="shadow-sm focus:ring-red-500 focus:border-red-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md p-1"
                           {...register('description', {
                             required: 'Este campo es requerido',
                             minLength: { value: 4, message: 'Mínimo 5 caracteres' }
@@ -188,7 +188,7 @@ export const FormFeatured: FC<Props> = ({ featured, category}) => {
                         />
                       </div>
                       <div>
-                        {errors.description && <span className="text-sm text-orange-500">{errors.description.message}</span>}
+                        {errors.description && <span className="text-sm text-red-500">{errors.description.message}</span>}
                       </div>
                     </div>
                     <div className="grid grid-cols-6 gap-6">
@@ -196,7 +196,7 @@ export const FormFeatured: FC<Props> = ({ featured, category}) => {
                     <div className="px-4 py-3 bg-white text-right sm:px-6">
                       <button
                         type="submit"
-                        className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                        className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
                       >
                         {
                           featured._id ? `Actualizar Destacado` : `Crear Destacado`

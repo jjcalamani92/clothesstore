@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useRouter } from 'next/router';
 import Link from "next/link";
 import React, { FC, useState } from "react";
-import { IHardware, Site } from "../../../src/interfaces";
+import { IClothing, Site } from "../../../src/interfaces";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 import axios from "axios";
@@ -24,7 +24,7 @@ export const TableSite: FC<Props> = ({ site }) => {
   const [show, setShow] = useState(null);
 
   const onDeleteData = async (id: string) => {
-    // await axios.delete(`${process.env.APIP_URL}/api/hardware/${id}`)
+    // await axios.delete(`${process.env.APIP_URL}/api/clothing/${id}`)
     // router.reload()
     // console.log(id)
   }

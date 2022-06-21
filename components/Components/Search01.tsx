@@ -4,7 +4,7 @@ import { XIcon } from '@heroicons/react/outline'
 import { UiContext } from '../../src/context'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { IHardware } from '../../src/interfaces'
+import { IClothing } from '../../src/interfaces'
 
 
 
@@ -94,9 +94,9 @@ export const Search01 = () => {
                             // })}
                           />
                           {/* <div>
-                            {errors.search && <span className="text-sm text-orange-500">{errors.search.message}</span>}
+                            {errors.search && <span className="text-sm text-red-500">{errors.search.message}</span>}
                           </div> */}
-                          <button className="focus:ring-2 focus:ring-offset-2 bg-gray-100 text-gray-600 focus:text-orange-700 focus:rounded-full  focus:bg-gray-100 focus:ring-orange-700 focus:outline-none absolute right-0 top-0 mt-5 mr-4">
+                          <button className="focus:ring-2 focus:ring-offset-2 bg-gray-100 text-gray-600 focus:text-red-700 focus:rounded-full  focus:bg-gray-100 focus:ring-red-700 focus:outline-none absolute right-0 top-0 mt-5 mr-4">
                             <FontAwesomeIcon
                               className="text-sm leading-none mx-1 text-gray-600 hover:text-gray-900 rounded focus:outline-none bottom-1 right-1 fill-current h-4 w-4"
                               // onClick={() => onDeleteImage(data)}
@@ -123,7 +123,7 @@ export const Search01 = () => {
                           //     }
                           //   )
                           // })
-                          .map((product:IHardware, i:number) => (
+                          .map((product:IClothing, i:number) => (
                           <li key={i} className="flex py-6">
                             <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                               <img
@@ -149,7 +149,7 @@ export const Search01 = () => {
                                 <div className="flex">
                                   <button
                                     type="button"
-                                    className="font-medium text-orange-600 hover:text-orange-500"
+                                    className="font-medium text-red-600 hover:text-red-500"
                                   >
                                     Ver Producto
                                   </button>
