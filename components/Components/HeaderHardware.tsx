@@ -210,7 +210,7 @@ export const HeaderHardware = () => {
               </button>
 
               {/* Logo */}
-              <div className="ml-4 flex lg:ml-0">
+              <div className="ml-4 flex lg:ml-0 ">
                 <Link href="/">
                   <a >
                     <span className="sr-only">Workflow</span>

@@ -16,10 +16,9 @@ const UI_INITIAL_STATE: UiState = {
 	isCartOpen: false,
 	site: {
 		_id: "w",
-		title: "Fierros",
-		domain: "fierrosferreteria.com",
-		// logo: "https://res.cloudinary.com/dvcyhn0lj/image/upload/v1647095547/piccoletti-logo_j6hxbw.jpg",
-		logo: "https://res.cloudinary.com/dvcyhn0lj/image/upload/v1648919933/Ferreteria/l91xephj1ctcxor7h06d.png",
+		title: "Piccoletti",
+		domain: "piccoletti.com",
+		logo: "https://res.cloudinary.com/dvcyhn0lj/image/upload/v1647095547/piccoletti-logo_j6hxbw.jpg",
 		numberPhone: "68175851",
 		address: "av fatima",
 		description: "av fatima",
@@ -63,9 +62,7 @@ const UI_INITIAL_STATE: UiState = {
 				],
 			},
 		],
-		pages: [
-			{ _id: '2', name: 'linea automotiva', href: '/' },
-		],
+		pages: [],
 	}
 };
 

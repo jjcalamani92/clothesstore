@@ -15,7 +15,7 @@ export const Footer01 = () => {
                         <div className="lg:flex">
                             <div className="w-full lg:w-1/2 mb-16 lg:mb-0 flex">
 
-                                <div className="w-full lg:w-1/2 px-6">
+                                {/* <div className="w-full lg:w-1/2 px-6">
                                     <ul>
                                         <li>
                                             <Link href="/ferreteria">
@@ -28,6 +28,27 @@ export const Footer01 = () => {
                                             <Link href="/linea-automotiva">
 
                                                 <a className="text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">Linea Automotiva</a>
+                                            </Link>
+                                        </li>
+
+                                    </ul>
+                                </div> */}
+                                <div className="w-full lg:w-1/2 px-6">
+                                    <ul>
+                                        <li>
+                                            <Link href="#">
+                                                <a className="text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">Contacto</a>
+                                            </Link>
+                                        </li>
+
+                                        <li className="mt-6">
+                                            <Link href="#">
+                                                <a className="text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">Blog</a>
+                                            </Link>
+                                        </li>
+                                        <li className="mt-6">
+                                            <Link href="#">
+                                                <a className="text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">FAQs</a>
                                             </Link>
                                         </li>
 

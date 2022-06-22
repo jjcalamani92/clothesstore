@@ -1,4 +1,6 @@
-import { FC,  } from "react";
+import { useRouter } from "next/router";
+import { FC, useContext,  } from "react";
+import { UiContext } from "../../src/context";
 import { IClothing } from "../../src/interfaces";
 import { SwiperDetail } from "./Swiper";
 
@@ -11,6 +13,7 @@ interface Props {
 }
 
 export const ProductOverviews: FC<Props> = ({ product }) => {
+	const { site } = useContext(UiContext)
 
 	return (
 		<>
@@ -23,7 +26,7 @@ export const ProductOverviews: FC<Props> = ({ product }) => {
 						<SwiperDetail image={product.image} />
 					</div>
 					<div className="col-span-2 " >
-						<div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+						<div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8 mt-4 lg:mt-0">
 							<h1 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl mb-4">
 								{product.name}
 							</h1>
@@ -31,14 +34,22 @@ export const ProductOverviews: FC<Props> = ({ product }) => {
 						<div className="mt-4 lg:mt-0 lg:row-span-3">
 							<h2 className="sr-only">Product information</h2>
 							<p className="text-3xl text-gray-900">{product.price}.00 Bs </p>
-							<form className="mt-5">
+							{/* <form className="mt-5">
 								<button
 									type="submit"
 									className="mt-4 w-full bg-red-500 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400"
 								>
 									Agregar al carrito
 								</button>
-							</form>
+								
+							</form> */}
+								<a
+									href={`https://wa.me/591${site.numberPhone}?text=Hola%20me%20interesa%20este%20producto:%20https://${site.domain}/detalles/${product.slug}`}
+									target={'blank'}
+									className="mt-4 w-full bg-red-500 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400"
+								>
+									Preguntar por WhatsApp
+								</a>
 							<div className="py-2 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
 
 
