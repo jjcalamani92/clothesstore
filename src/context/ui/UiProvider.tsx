@@ -26,7 +26,7 @@ const UI_INITIAL_STATE: UiState = {
 		categories: [
 			{
 				_id: 'men',
-				name: 'ferreteria',
+				name: 'hombre',
 				imageSrc:"https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
 				featured: [
 					{
