@@ -24,11 +24,11 @@ const CategoryPage:FC<Props>= ({seo, category}) => {
 		>
 			<HeadingPrimary seo={seo} />
 			<CategoryPreviews01 section={category.sections} category={`${category.href}`}/>
-			{
+			{/* {
 				category.featured.length === 0
 				? null
 				: <CategoryPreviews02 featured={category.featured}/>
-			}
+			} */}
 		</Layout>
 	);
 };
